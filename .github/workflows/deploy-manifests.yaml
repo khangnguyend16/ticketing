@@ -1,3 +1,4 @@
+# workflow này deploy toàn bộ cấu hình Kubernetes từ repo lên cluster DigitalOcean tự động mỗi khi có thay đổi trong thư mục infra
 name: deploy-manifests
 on:
   push:
