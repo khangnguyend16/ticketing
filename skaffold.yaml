@@ -8,6 +8,9 @@ build:
     push: false
   # googleCloudBuild:
   #   projectId: ticketing-dev-466204
+  tagPolicy:
+    envTemplate:
+      template: "latest"
   artifacts:
     # - image: us.gcr.io/ticketing-dev-466204/auth
     - image: khangnguyen/auth
