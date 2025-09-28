@@ -1,5 +1,4 @@
 name: deploy-auth
-
 on:
   push:
     branches:
@@ -17,6 +16,9 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - run: docker tag khangnguyen/auth khangnguyend16/ticketing-auth && docker push khangnguyend16/ticketing-auth
-      - uses: digitalocean/action-doctl@v2
+      - uses: digitalocean/action-doctl@v2  # Cài đặt DigitalOcean CLI (doctl)
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - run: doctl kubernetes cluster kubeconfig save ticketing
+      - run: kubectl rollout restart deployment auth-depl
+ 
