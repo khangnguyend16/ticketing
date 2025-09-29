@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: khangnguyen/auth
+          image: khangnguyend16/ticketing-auth
           env:
             - name: MONGO_URI
               value: "mongodb://auth-mongo-srv:27017/auth"
@@ -23,7 +23,7 @@ spec:
                 secretKeyRef:
                   name: jwt-secret
                   key: JWT_KEY
-          imagePullPolicy: Always
+          # imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service

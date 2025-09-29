@@ -4,21 +4,20 @@ on:
     branches:
       - main
     paths:
-      - 'auth/**'
+      - "auth/**"
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd auth && docker build -t khangnguyen/auth .
+      - run: cd auth && docker build -t khangnguyend16/ticketing-auth:latest .
       - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        env: 
+        env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker tag khangnguyen/auth khangnguyend16/ticketing-auth && docker push khangnguyend16/ticketing-auth
-      - uses: digitalocean/action-doctl@v2  
+      - run: docker push khangnguyend16/ticketing-auth
+      - uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - run: doctl kubernetes cluster kubeconfig save ticketing
       - run: kubectl rollout restart deployment auth-depl
- 

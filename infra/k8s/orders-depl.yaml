@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: orders
-          image: khangnguyen/orders
+          image: khangnguyend16/ticketing-orders
           env:
             - name: NATS_CLIENT_ID
               valueFrom:

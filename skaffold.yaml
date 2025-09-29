@@ -14,7 +14,7 @@ build:
       template: "latest"
   artifacts:
     # - image: us.gcr.io/ticketing-dev-466204/auth
-    - image: khangnguyen/auth
+    - image: khangnguyend16/ticketing-auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -22,7 +22,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: khangnguyen/client
+    - image: khangnguyend16/ticketing-client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -30,7 +30,7 @@ build:
         manual:
           - src: "**/*.js"
             dest: .
-    - image: khangnguyen/tickets
+    - image: khangnguyend16/ticketing-tickets
       context: tickets
       docker:
         dockerfile: Dockerfile
@@ -38,7 +38,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: khangnguyen/orders
+    - image: khangnguyend16/ticketing-orders
       context: orders
       docker:
         dockerfile: Dockerfile
@@ -46,7 +46,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: khangnguyen/expiration
+    - image: khangnguyend16/ticketing-expiration
       context: expiration
       docker:
         dockerfile: Dockerfile
@@ -54,7 +54,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: khangnguyen/payments
+    - image: khangnguyend16/ticketing-payments
       context: payments
       docker:
         dockerfile: Dockerfile
