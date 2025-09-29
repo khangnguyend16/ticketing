@@ -23,7 +23,7 @@ spec:
                 secretKeyRef:
                   name: jwt-secret
                   key: JWT_KEY
-          imagePullPolicy: Never
+          # imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

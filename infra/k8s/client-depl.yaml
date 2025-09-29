@@ -15,7 +15,7 @@ spec:
       containers:
         - name: client
           image: khangnguyen/client
-          imagePullPolicy: Never
+          # imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

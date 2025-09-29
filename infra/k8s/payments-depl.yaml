@@ -36,7 +36,7 @@ spec:
                 secretKeyRef:
                   name: stripe-secret
                   key: STRIPE_KEY
-          imagePullPolicy: Never
+          # imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
