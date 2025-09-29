@@ -15,7 +15,8 @@ app.use(
   cookieSession({
     //middleware lưu dữ liệu session trực tiếp trong cookie (khác với express-session là lưu server-side).
     signed: false, // cookie chỉ chứa token JWT, mà token này đã tự có chữ ký rồi.
-    secure: process.env.NODE_ENV !== "test", // Cookie chỉ được gửi qua HTTPS (ngoại lệ cho trường hợp test!)
+    // secure: process.env.NODE_ENV !== "test", // Cookie chỉ được gửi qua HTTPS (ngoại lệ cho trường hợp test!)
+    secure: false,
   })
 );
 
