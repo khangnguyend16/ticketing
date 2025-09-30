@@ -20,7 +20,9 @@ A **microservices-based ticketing platform** built with **Node.js, TypeScript, D
 - **Event-driven communication** via **NATS Streaming**  
 - **Optimistic concurrency control** with MongoDB & Mongoose  
 - **Asynchronous workflows** with Redis & Bull  
-- **Scalable deployment** with Docker, Kubernetes, Skaffold, and Ingress-NGINX  
+- **Scalable deployment** with Docker, Kubernetes, Skaffold, and Ingress-NGINX
+  
+---
 
 ## 🛠️ Tech Stack
 
@@ -41,5 +43,28 @@ A **microservices-based ticketing platform** built with **Node.js, TypeScript, D
 
 ```bash
 skaffold dev
+```
+Then access the app via **Ingress-NGINX** in your browser
 
-Access the app via Ingress-NGINX in your browser.
+---
+
+## ✅ Running Tests
+Each service has its own test suite:
+```bash
+npm run test
+```
+- Unit tests & integration tests
+- Powered by Jest & Supertest
+
+  ---
+
+## 🚀 Deployment
+
+CI/CD pipelines are set up with GitHub Actions.
+
+On push to main branch:
+
+1. Build Docker Images
+2. Push to Docker Hub
+3. Deploy to DigitalOcean Kubernetes Cluster
+
