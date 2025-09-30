@@ -39,6 +39,26 @@ A **microservices-based ticketing platform** built with **Node.js, TypeScript, D
 
 ---
 
+## 📦 Installation
+
+To set up the project locally, follow these steps:
+
+```bash
+# Clone repository
+git clone https://github.com/khangnguyend16/ticketing.git
+cd ticketing
+
+# Install dependencies for each service
+cd auth && npm install
+cd ../tickets && npm install
+cd ../orders && npm install
+cd ../payments && npm install
+cd ../expiration && npm install
+cd ../client && npm install
+```
+
+---
+
 ## ⚡ Run locally with Skaffold
 
 ```bash
