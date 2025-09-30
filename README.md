@@ -39,7 +39,7 @@ A **microservices-based ticketing platform** built with **Node.js, TypeScript, D
 
 ---
 
-## 📦 Installation
+## ⚙️ Installation
 
 To set up the project locally, follow these steps:
 
