@@ -41,3 +41,5 @@ A **microservices-based ticketing platform** built with **Node.js, TypeScript, D
 
 ```bash
 skaffold dev
+
+Access the app via Ingress-NGINX in your browser.
