@@ -22,3 +22,22 @@ A **microservices-based ticketing platform** built with **Node.js, TypeScript, D
 - **Asynchronous workflows** with Redis & Bull  
 - **Scalable deployment** with Docker, Kubernetes, Skaffold, and Ingress-NGINX  
 
+## 🛠️ Tech Stack
+
+- **Backend:** Node.js, Express, TypeScript  
+- **Database:** MongoDB  
+- **Messaging/Event Bus:** NATS Streaming  
+- **Queues:** Redis + Bull  
+- **Testing:** Jest, Supertest  
+- **DevOps:** Docker, Kubernetes, Skaffold, Ingress-NGINX  
+- **CI/CD:** GitHub Actions  
+- **Payments:** Stripe API  
+- **Cloud Hosting:** DigitalOcean Kubernetes Cluster  
+- **Library:** Shared npm package (`common`)  
+
+---
+
+## ⚡ Run locally with Skaffold
+
+```bash
+skaffold dev
